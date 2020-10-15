@@ -1,0 +1,530 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    height: 100vh;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+                                        /**************VARIABLE**************/
+
+:root{
+    --color-blue: #1F618D;
+}
+
+                    /********************************GENERAL***********************************/
+
+body 
+{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(230, 230, 230);
+}
+
+a 
+{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+h1 
+{
+    color: var(--color-blue);
+    font-size: 2.9rem;
+    font-weight: bold;
+}
+
+p
+{
+    color: var(--color-blue);
+    font-size: 2rem;}
+
+input:hover
+{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+input
+{
+    border: none;
+    margin-top: 24px;
+    font-size: 1.8rem;
+    border-radius: 20px;
+    background-color: var(--color-blue);
+    color: white;
+    padding: 10px;
+    max-width: 500px;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+button:hover
+{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+button
+{
+    border: none;
+    margin-top: 24px;
+    font-size: 3rem;
+    border-radius: 20px;
+    background-color: var(--color-blue);
+    color: white;
+    padding: 10px;
+}
+
+select:focus
+{
+    outline: none;
+}
+
+tr
+{
+    border-bottom: solid 2px;
+}
+
+                            /***************************HEADER***************************/
+
+header 
+{
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-blue);
+    z-index: 900;
+}
+
+.list_nav 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100px;
+}
+
+.list_nav a:hover 
+{
+    opacity: 0.5;
+    transition: 0.2s;  
+}
+
+
+                                /**************************MAIN**************************/
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main
+{
+    margin-top: 50px;
+}
+
+.title-main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-rand-p
+{
+    padding-top: 20px;
+}
+
+.table-rand
+{
+    padding: 20px 0;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: var(--color-blue);
+    border-radius: 60px;
+    line-height: 1.5em;
+}
+
+
+
+.list-nav-main 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+}
+
+.list-nav-main a 
+{
+    padding: 10px;
+    border: solid var(--color-blue);
+    border-radius: 25px;
+    background-color: var(--color-blue);
+    
+}
+
+.list-nav-main a:hover
+{
+    padding: 15px;
+    transition: 0.5s;
+}
+
+
+
+                                /******************PAGE REVISION.PHP*****************/
+
+
+.div-revision
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-revision label
+{
+    font-size: 3rem;
+    border-radius: 20px; 
+    color: var(--color-blue);
+    padding: 20px;
+}
+
+.select-revision
+{
+    margin: 60px 0;
+}
+
+.select-revision select
+{
+    font-size: 27px;
+    border-radius: 10px;
+    border: var(--color-blue);
+}
+
+#submit-revision
+{
+    font-size: 1.8rem;
+    background-color: var(--color-blue);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#submit-revision:hover
+{
+    opacity: 0.8;
+}
+
+.div_result_revision
+{
+    text-align: center;
+    
+    line-height: 1.4;
+    font-size: 1.3rem;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    background-color: var(--color-blue)
+}
+
+                                /**********************PAGE REVISONS************************/
+
+.div-revisions
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-revisions label:nth-child(1) 
+{
+    font-size: 3rem;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--color-blue);
+}
+
+.list-number-revisions
+{
+    margin: 60px 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-number-revisions input
+{
+    height: 20px;
+    width: 20px;
+    margin: 0 20px;
+}
+
+.list-number-revisions label
+{
+    color: var(--color-blue);
+}
+
+.div-table-revisions
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.table-result-revisions
+{
+    text-align: center;
+    
+    line-height: 1.4;
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    background-color: var(--color-blue);
+}
+
+                            /***************************PAGE TEST********************************/
+
+.div_test
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 50px 100px 0 100px;
+}
+
+.div-test-unit
+{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 20px 0;
+}
+
+.div-test-unit input
+{
+    height: 10px;
+    width: 80px;
+    margin-left: 10px;
+
+    background-color: white;
+    color: var(--color-blue);
+    text-align: center;
+}
+
+.div-test-unit label
+{
+    font-size: 3rem;
+    color: var(--color-blue);
+}
+
+.div_reponse
+{
+    margin: auto 100px;
+    text-align: center;
+}
+
+.div_reponse a 
+{
+    text-align: center;
+    
+    margin-top: 14px;
+    font-size: 1.8rem;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: var(--color-blue);
+}
+
+.div_right
+{
+    position: relative;
+    font-size: 2.5rem;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    color: var(--color-blue);
+    border-radius: 20px;
+}
+
+.div_right::after
+{
+    content: url('img/checked.svg');
+    position: absolute;
+    right: 41%;
+    width: 35px;
+}
+
+.div_false
+{
+    position: relative;
+
+    font-size: 2.5rem;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    color: var(--color-blue);
+    border-radius: 20px;
+}
+
+.div_false::after
+{
+    position: absolute;
+    right: 41%;
+    width: 35px;
+    content: url('img/croix.svg');
+}
+
+
+ /***************************PAGE TEST 2********************************/
+
+.main_test2
+{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_test2
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ .form_test2 form:nth-child(1)
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0 100px;
+}
+
+.title_test2
+{
+    font-size: 4rem;
+    color: var(--color-blue);
+}
+
+.form_test2 form:nth-child(1) select
+{
+    width: 78px;
+    margin: 40px auto;
+    font-size: 2.3rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.form_test2 form:nth-child(2)
+{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 100px 0 100px;
+    text-align: center;
+}
+
+.result_test2
+{
+    margin-bottom: 50px;
+}
+
+.result_test2 label
+{
+    font-size: 4rem;
+    color: var(--color-blue);
+}
+
+.result_test2 input
+{
+    margin: 0;
+    width: 124px;
+    background-color: white;
+    font-size: 4rem;
+    color: var(--color-blue);
+}
+
+/*********************REPONSE TEST 2**********************/
+
+.mauvaise_reponse
+{
+    font-size: 4rem;
+    color: var(--color-blue);
+}
+.bonne_reponse
+{
+    font-size: 4rem;
+    color: var(--color-blue);
+}
