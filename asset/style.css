@@ -59,9 +59,21 @@ table {
 
 body 
 {
+    margin-top: 100px;
+    height: calc(100vh - 100px);
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(230, 230, 230);
+}
+
+main
+{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 a 
@@ -138,6 +150,7 @@ tr
 header 
 {
     position: fixed;
+    top: 0;
     width: 100%;
     background-color: var(--color-blue);
     z-index: 900;
@@ -161,27 +174,16 @@ header
 
                                 /**************************MAIN**************************/
 
-main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
 .main
 {
-    margin-top: 50px;
-}
-
-.title-main
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin: 20px;
 }
 
 .p-main
 {
+    padding-top: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,11 +240,11 @@ main {
 
 .div-revision
 {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .div-revision label
@@ -296,11 +298,12 @@ main {
 
 .div-revisions
 {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .div-revisions label:nth-child(1) 
@@ -360,8 +363,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin: 50px 100px 0 100px;
 }
 
 .div-test-unit
@@ -391,8 +392,9 @@ main {
 
 .div_reponse
 {
-    margin: auto 100px;
+    margin: auto;
     text-align: center;
+    width: 86%;
 }
 
 .div_reponse a 
@@ -408,59 +410,51 @@ main {
 
 .div_right
 {
-    position: relative;
     font-size: 2.5rem;
     margin: 20px;
     padding: 20px;
     background-color: white;
     color: var(--color-blue);
     border-radius: 20px;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.div_right::after
+.div_right img
 {
-    content: url('img/checked.svg');
-    position: absolute;
-    right: 41%;
-    width: 35px;
+    margin-left: 20px;
 }
 
 .div_false
 {
-    position: relative;
-
     font-size: 2.5rem;
     margin: 20px;
     padding: 20px;
     background-color: white;
     color: var(--color-blue);
     border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.div_false::after
+.div_false img
 {
-    position: absolute;
-    right: 41%;
-    width: 35px;
-    content: url('img/croix.svg');
+    margin-left: 20px;
 }
-
 
  /***************************PAGE TEST 2********************************/
 
 .main_test2
 {
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
 
-.form_test2
-{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    text-align: center;
 }
 
  .form_test2 form:nth-child(1)
@@ -469,8 +463,6 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    margin: 0 100px;
 }
 
 .title_test2
@@ -492,6 +484,7 @@ main {
 {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 100px 100px 0 100px;
     text-align: center;
 }
@@ -514,6 +507,7 @@ main {
     background-color: white;
     font-size: 4rem;
     color: var(--color-blue);
+    text-align: center;
 }
 
 /*********************REPONSE TEST 2**********************/
@@ -528,3 +522,203 @@ main {
     font-size: 4rem;
     color: var(--color-blue);
 }
+
+
+
+
+
+/*************************RESPONSIVE******************************/
+
+@media (max-width: 1325px){
+
+    .list-number-revisions 
+    {
+        flex-wrap: wrap;
+    }
+
+    .div-table-revisions{
+        flex-wrap: wrap;
+        margin: 30px 10px;
+        
+    }
+
+    .table-result-revisions
+    {
+        margin: 10px;
+    }
+}
+
+@media (max-height: 740px){
+
+
+    button
+    {
+        font-size: 2rem;
+    }
+
+    .div-test-unit
+    {
+        margin: 9px;
+    }
+
+    .div_false{
+        padding: 0;
+    }
+    .div_right{
+        padding: 0;
+    }
+
+    .form_test2 form:nth-child(2)
+    {
+        margin: 15px 90px;
+    }
+
+    .result_test2
+    {
+        margin: 0;
+    }
+}
+
+
+
+/*******MENU BURGER******/
+
+@media (max-width: 740px){
+
+    body {
+        margin-top: 70px;
+    }
+    .div_span_burger 
+    {
+        height: 54px;
+        width: 54px;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 25px;
+        right: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 1s;
+    }
+    .div_span_burger span.trait
+    {
+        display: block;
+        width: 27px;
+        height: 2px;
+
+        background-color: var(--color-blue);
+        transform: translateX(50%) translateY(50%);
+        
+    }
+
+    .div_span_burger span.trait::before, .div_span_burger span.trait::after
+    {
+    content: '';
+
+    display: block;
+        width: 27px;
+        height: 2px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color:  var(--color-blue);
+        transform: translateY(-9px);
+        transition: transform 1s;
+    }
+
+    .div_span_burger span.trait::after
+    {
+    transform: translateY(9px);
+    }
+
+    .div_span_burger:hover span.trait::before
+    {
+    transform: translateY(-12px);
+
+    }
+
+    .div_span_burger:hover span.trait::after
+    {
+    transform: translateY(12px);
+
+    }
+
+    .div_span_burger span.trait 
+    {
+    transition: 1s;
+    transform: rotate(0deg);
+ }
+
+
+  /***********changement via js**************/
+
+  .nav_bar{
+      height: 0;
+      margin-top: -100vh;
+      transition: all 1s;
+  }
+
+ .nav_bar.change
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+    transition: all 0.5s;
+
+ }
+
+ .list_nav
+ {
+    display: none;
+ }
+
+ .list_nav.change
+ {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    align-items: center;
+ }
+
+ .div_span_burger span.trait.change 
+ {
+     background-color: transparent;
+     top: unset;
+     transform: rotate(180deg);
+ }
+
+ .div_span_burger span.trait.change::before
+ {
+    background-color: white;
+    transform: translateY(0) rotate(45deg);
+    transition: all 0.5s;
+ }
+
+ .div_span_burger span.trait.change::after
+{
+    background-color: white;
+    transform: translateY(0) rotate(-45deg);
+    transition: all 0.5s;
+}
+.div_span_burger:hover span.trait.change::after{
+    width: 31px;
+    transition: all 0.5s;
+}
+.div_span_burger:hover span.trait.change::before{
+    width: 31px;
+    transition: all 0.5s;
+}
+}
+
+
+

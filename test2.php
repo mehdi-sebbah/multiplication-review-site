@@ -8,7 +8,7 @@ $title = "test(2)";
     <div class="form_test2">
         <form action="test2.php" method="post">
             <div class="title_test2">Choisissez une table</div>
-            <select name="test2">
+            <select name="test2" size="1">
                 <?php choix_select() ?>
             </select>
             <input type="submit" value="Valider la table">

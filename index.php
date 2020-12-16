@@ -1,4 +1,4 @@
-<?php 
+<?php
 $title = "Accueil";
 include_once('asset/header.php') ?>
 <main>
@@ -17,6 +17,5 @@ include_once('asset/header.php') ?>
                 </div>
             </div>
         </div>
-        
     </div>
     <?php include_once('asset/footer.php'); ?>
